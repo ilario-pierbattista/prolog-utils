@@ -41,4 +41,5 @@ flycheck_*.el
 # projectiles files
 .projectile
 
-.sublime-project
+*.sublime-project
+*.sublime-workspace
