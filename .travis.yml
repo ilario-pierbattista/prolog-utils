@@ -1,4 +1,5 @@
 sudo: required
+notifications: never
 
 before_install:
   - sudo apt-get -qq update
