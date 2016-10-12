@@ -7,3 +7,4 @@
 :- op(300, xfy,	'e').
 
 aldo suona chitarra e tastiera.
+ugo suona chitarra e basso e tastiera.

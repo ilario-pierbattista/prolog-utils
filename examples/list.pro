@@ -27,6 +27,11 @@ even_elements([_,_|Tail]) :- even_elements(Tail).
 odd_elements([_]).
 odd_elements([_,_|Tail]) :- odd_elements(Tail).
 
+%% Check if is a list
+is_a_list([]).
+is_a_list([_|Tail]) :-
+	is_a_list(Tail).
+
 /*
  * Test
  */
@@ -53,4 +58,35 @@ test(odd_even) :-
 	assertion(not(odd_elements(LE))),
 	assertion(odd_elements(LO))
 	.
+
+test(is_a_list) :-
+	assertion(is_a_list([])),
+	assertion(is_a_list([1,2,3,4])),
+	assertion(not(is_a_list(aldo))),
+	assertion(not(is_a_list(10)))
+	.
 :- end_tests(example_list).
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

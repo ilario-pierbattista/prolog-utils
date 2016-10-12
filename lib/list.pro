@@ -17,3 +17,7 @@ last(Element, List) :- append(_, [Element], List).
 
 
 
+
+
+
+
