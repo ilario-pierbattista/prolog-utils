@@ -27,6 +27,9 @@ even_elements([_,_|Tail]) :- even_elements(Tail).
 odd_elements([_]).
 odd_elements([_,_|Tail]) :- odd_elements(Tail).
 
+/*
+ * Test
+ */
 :- begin_tests(example_list).
 test(last) :-
 	L1 = [1],
