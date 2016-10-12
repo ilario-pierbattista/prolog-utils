@@ -40,3 +40,5 @@ flycheck_*.el
 
 # projectiles files
 .projectile
+
+.sublime-project
