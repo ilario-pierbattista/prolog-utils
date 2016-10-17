@@ -11,29 +11,80 @@
  *
  */
 
-/*
- * Reimplementing some basic predicates
- */
+%!	last_recursive(+Element: atom, +List: list) is semidet.
+% Controlla che Element sia l'ultimo elemento di List.
 
-%% Last Element, recursive implementation
+%!	last_recursive(-Element: atom, +List: list) is nondet.
+% Cerca l'ultimo elemento della lista.
 last_recursive(Element, [Element]).
-last_recursive(Element, [_|Tail]) :- last_recursive(Element, Tail).
+last_recursive(Element, [_|Tail]) :-
+	last_recursive(Element, Tail).
 
-%% Even number of elements
+%!	even_elements(+List: list) is semidet.
+% Controlla che il numero di elementi di List sia pari.
 even_elements([]).
 even_elements([_,_|Tail]) :- even_elements(Tail).
 
-%% Odd number of elements
+%!	odd_elements(+List: list) is semidet.
+% Controlla che il numero di elementi di List sia dispari.
 odd_elements([_]).
 odd_elements([_,_|Tail]) :- odd_elements(Tail).
 
-%% Check if is a list
+%!	is_a_list(+List: list) is det.
+% Verifica che List sia effettivamente una lista.
 is_a_list([]).
 is_a_list([_|Tail]) :-
 	is_a_list(Tail).
 
-/*
+%!	list_length_rec(+List: list, +Length: int) is semidet.
+% Controlla che il numero di elementi di List sia pari al Length.
+% Implementata con la ricorsione. [17/10/16]
+
+%!	list_length_rec(+List: list, -Length: int) is nondet.
+% Conta il numero di elementi di List. Implementatta con la ricorsione.
+% [17/10/16]
+list_length_rec([], 0).
+list_length_rec([_|Tail], Length) :-
+	list_length_rec(Tail, LengthTail),
+	Length is LengthTail+1.
+
+%!	list_length_acc(+List: list, +Length: int) is semidet.
+% Controlla che il numero di elementi di List sia pari a Lenght.
+% Implementazione ricorsiva con accumulatori. [17/10/16]
+
+%!	list_length_acc(+List: list, -Length: int) is nondet.
+% Calcola il numero di elementi di List. Implementazione ricorsiva con
+% accumulatori. [17/10/16]
+list_length_acc(List, Length) :-                   % Lanciatore del predicato
+	list_length_acc(List, 0, Length).
+list_length_acc([], Accumulator, Accumulator).	   % Caso base
+list_length_acc([_|Tail], CurrentAcc, Length) :-   % Caso induttivo
+	IncrementedAcc is CurrentAcc+1,
+	list_length_acc(Tail, IncrementedAcc, Length).
+
+%%	List Append con accumulatore
+% 17/10/2016
+% @TODO
+
+%!	list_prefix(+Prefix: list, +List: list) is semidet.
+% Controlla che Prefix sia il prefisso di List. [17/10/16]
+
+%!	list_prefix(-Prefix: list, +List: list) is nondet.
+% Cerca i prefissi (Prefix) di List. [17/10/16]
+list_prefix(Prefix, List) :-
+	append(Prefix, _, List).
+
+%!	list_suffix(+Suffix: list, +List: list) is semidet.
+% Controlla che Suffix sia un suffisso di List. [17/10/16]
+
+%!	list_suffix(-Suffix: list, +List: list) is nondet.
+% Cerca i suffissi (Suffix) di List. [17/10/16]
+list_suffix(Suffix, List) :-
+	append(_, Suffix, List).
+
+/* ----------------------------------
  * Test
+ * ----------------------------------
  */
 :- begin_tests(example_list).
 test(last) :-
@@ -64,6 +115,18 @@ test(is_a_list) :-
 	assertion(is_a_list([1,2,3,4])),
 	assertion(not(is_a_list(aldo))),
 	assertion(not(is_a_list(10)))
+	.
+
+test(get_length) :-
+	L1 = [1],
+	L2 = [1,2,3],
+
+	assertion(list_length_rec([], 0)),
+	assertion(list_length_acc([], 0)),
+	assertion(list_length_rec(L1, 1)),
+	assertion(list_length_acc(L1, 1)),
+	assertion(list_length_rec(L2, 3)),
+	assertion(list_length_acc(L2, 3))
 	.
 :- end_tests(example_list).
 

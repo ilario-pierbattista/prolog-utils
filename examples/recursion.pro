@@ -1,32 +1,25 @@
 /*
- * Esercizi in aula 12/10/2016
+ * The MIT License (MIT)
+ *
+ * Copyright (c) 2016 Ilario Pierbattista, Melvin Mancini
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+ *
  */
 
-% Calcolo della lunghezza di una lista
-% list_length(List, Length)
-list_length([], 0).
-list_length([_|Tail], Length) :-
-	list_length(Tail, Length),
-	Length is Length + 1.
+%!	factorial(+N: int, -Factorial: int) is det.
+% Calcola il fattoriale (F) di N.
+factorial(0, 1).
+factorial(1, 1).
+factorial(N, F) :-
+	PreviousStep is N-1,
+	factorial(PreviousStep, PreviousFactorial),
+	F is N * PreviousFactorial.
 
-% Uso degli accumulatori
-% list_len_acc(List, Accumulator, Output)
-list_len_acc([], Acc, Acc).
-list_len_acc([_|Tail], Acc, Out) :-
-	Acc1 is Acc+1,
-	list_len_acc(Tail, Acc1, Out).
-
-% Unit test dell'esercizio
 :- begin_tests(exercises_recursion).
-text(list_len) :-
-	L1 = [1,3,4,5,7,8],
-	L2 = [1,2,4],
 
-	assertion(list_length([], 0)),
-	assertion(list_length(L1, 6)),
-	assertion(list_length(L2, 3)),
-	assertion(list_len_acc([], 0)),
-	assertion(list_len_acc(L1, 6)),
-	assertion(list_len_acc(L2, 3))
-	.
 :- end_tests(exercises_recursion).
