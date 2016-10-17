@@ -40,3 +40,8 @@ flycheck_*.el
 
 # projectiles files
 .projectile
+
+# macOS
+.DS_Store
+Thumbs.db
+
