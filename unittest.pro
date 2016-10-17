@@ -11,5 +11,5 @@
  *
  */
 
-:- include('../lib/list.pro').
-:- include('list-test.plt').
+:- include('lib/list.pro').
+:- include('test/list-test.plt').

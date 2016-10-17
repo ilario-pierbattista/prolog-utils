@@ -1,0 +1,14 @@
+sudo: required
+notifications: never
+
+addons:
+  apt:
+    sources:
+    - sourceline: 'ppa:swi-prolog/stable'
+
+before_install:
+  - sudo apt-get -qq update
+  - sudo apt-get install -y swi-prolog
+
+script:
+  - echo "run_tests. halt(0)." | swipl -s unittest.pro | grep -q 'true.'
