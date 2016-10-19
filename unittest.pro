@@ -13,3 +13,10 @@
 
 :- include('lib/list.pro').
 :- include('test/list-test.plt').
+:- include('examples/list.pro').
+
+
+
+
+
+

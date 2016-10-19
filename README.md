@@ -6,7 +6,7 @@ Definizioni di predicati ausiliari al linguaggio e raccolta di esercizi risolti 
 	/lib
 	/test
 	/examples
-* L cartella `doc` contiene degli appunti sullo SWI-Prolog
+* La cartella `doc` contiene degli appunti sullo SWI-Prolog
 * La cartella `lib` contiene la definizione di predicati sufficientemente utili da poter essere selezionati per estendere il set di predicati built-in nel linguaggio.
 * La directory `test` contiene la definizione degli unit test riferiti ai predicati definiti nella cartella `lib`.
 * La cartella `examples` contiene una raccolta di esercizi fatti a lezione, suddivisi per aree funzionali e, quando possibile, datati.
