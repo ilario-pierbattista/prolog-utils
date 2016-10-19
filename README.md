@@ -22,5 +22,16 @@ Anche i listati nella cartella `examples` vengono correlati di test unitari. Son
 Tutti i file hanno estensione `.pro`. Ciò non è del tutto conforme con lo SWI-Prolog, quindi bisogna **forzare la compilazione in prolog**. Per fare ciò è sufficiente cliccare in `File > Mode > prolog`.
 Non è consigliabile lavorare con file in estensione `.pl` (e non verranno usati in questo repository) in quanto, nella maggior parte dei sistemi, tale estensione è associata agli script perl.
 
+## Documentazione
+È disponibile, per molti predicati, una documentazione navigabile (simile al *javadoc*, per intenderci).
+Compilato un file, è possibile navigarne la documentazione - se presente - dal browser web.
+Bisogna avviare il server interno per la documantazione (si può usare una porta a piacere a posto della 4000). Eseguire:
+
+	?- doc_server(4000).
+
+Quindi è sufficiente visitare [](http://localhost:4000).
+
+La struttura dei commenti strutturati in Prolog è molto rigida ed ha una precisa semantica (definita parzialmente [qui](http://www.swi-prolog.org/pldoc/man?section=modes)).
+
 ## Appunti
 [Appunti SWI-Prolog](doc/index.md)

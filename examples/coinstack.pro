@@ -35,12 +35,18 @@
  *
  */
 
+%!	is_state(+State: state) is semidet.
+% Controlla che lo stato state(X,Y,Z) sia ammissibile.
 is_state(state(X,Y,Z)) :-
 	X+Y+Z =:= 12,
 	X >= 0,
 	Y >= 0,
 	Z >= 0.
 
+%!	legal_move(+PrevState: state, -NextState: state) is nondet.
+% Ricerca i possibili stati successivi a PrevState, nel senso che, a
+% fronte delle possibili mosse eseguibili, ricava lo stato risultante
+% all'applicazione delle stesse.
 legal_move(state(X1,Y1,Z), state(X2,Y2,Z)) :-
 	is_state(state(X1,Y1,Z)),
 	Y2 is Y1*2,
@@ -77,12 +83,14 @@ legal_move(state(X,Y1,Z1), state(X,Y2,Z2)) :-
 	Z2 is Z1 - Y1,
 	is_state(state(X,Y2,Z2)).
 
+%!	goal_state(State: state) is semidet.
+% Imposta lo stato obiettivo dell'esercizio.
 goal_state(state(4,4,4)).
 
 %!	search_dfs(+State: state, -Solution:list, +MaxDepth:int) is
 %!	semidet.
-%	Rircerca la soluzione Solution (lista di stati) che a
-%	partire dallo stato state(X,Y,Z) giunge allo stato di goal.
+% Rircerca la soluzione Solution (lista di stati) che a partire dallo
+% stato state(X,Y,Z) giunge allo stato di goal.
 search_dfs(LastState, [LastState], MaxDepth) :-
 	goal_state(LastState),
 	MaxDepth >= 0.
