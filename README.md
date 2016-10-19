@@ -17,7 +17,7 @@ Definizioni di predicati ausiliari al linguaggio e raccolta di esercizi risolti 
 * La directory `test` contiene la definizione degli unit test riferiti ai predicati definiti nella cartella `lib`.
 * La cartella `examples` contiene una raccolta di esercizi fatti a lezione, suddivisi per aree funzionali e, quando possibile, datati.
 
-## Compilare il file singoli
+## Compilare i file singoli
 Tutti i file hanno estensione `.pro`. Ciò non è del tutto conforme con lo SWI-Prolog, quindi bisogna **forzare la compilazione in prolog**. Per fare ciò è sufficiente cliccare in `File > Mode > prolog`.
 Non è consigliabile lavorare con file in estensione `.pl` (e non verranno usati in questo repository) in quanto, nella maggior parte dei sistemi, tale estensione è associata agli script perl.
 
