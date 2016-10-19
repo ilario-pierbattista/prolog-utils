@@ -2,6 +2,10 @@
  * Esercizio presentato in data 18/10/2016
  * Risoluzione in PROLOG
  *
+ * ATTENZIONE! Per eseguire l'esercizio è sufficiente compilare e
+ * lanciare il predicato, ad esempio, state_dfs(state(7,4,1), Solution,
+ * 2).
+ *
  * Si hanno 12 monete, poste in 3 pile distinte. Inizialmente nella
  * prima pila ci sono 7 monete, nella seconda 4, nella terza 1. Si tenga
  * presente che è possibile spostare delle monete dalla pila A alla pila
@@ -75,7 +79,10 @@ legal_move(state(X,Y1,Z1), state(X,Y2,Z2)) :-
 
 goal_state(state(4,4,4)).
 
-
+%!	search_dfs(+State: state, -Solution:list, +MaxDepth:int) is
+%!	semidet.
+%	Rircerca la soluzione Solution (lista di stati) che a
+%	partire dallo stato state(X,Y,Z) giunge allo stato di goal.
 search_dfs(LastState, [LastState], MaxDepth) :-
 	goal_state(LastState),
 	MaxDepth >= 0.

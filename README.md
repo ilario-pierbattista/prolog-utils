@@ -18,5 +18,9 @@ I predicati nella cartella `lib` sono correlati di test unitari (cartella `test`
 
 Anche i listati nella cartella `examples` vengono correlati di test unitari. Sono definiti all'interno dei file stessi che definiscono i predicati e per eseguirli è sufficiente **eseguire** il comando `?- run_tests` **una volta compilato il file**.
 
+## Compilare il file singoli
+Tutti i file hanno estensione `.pro`. Ciò non è del tutto conforme con lo SWI-Prolog, quindi bisogna **forzare la compilazione in prolog**. Per fare ciò è sufficiente cliccare in `File > Mode > prolog`.
+Non è consigliabile lavorare con file in estensione `.pl` (e non verranno usati in questo repository) in quanto, nella maggior parte dei sistemi, tale estensione è associata agli script perl.
+
 ## Appunti
 [Appunti SWI-Prolog](doc/index.md)
