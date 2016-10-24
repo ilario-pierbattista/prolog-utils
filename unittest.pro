@@ -29,6 +29,7 @@
 :- include('test/list-test.plt').
 :- include('examples/list.pro').
 :- include('examples/coinstack.pro').
+:- include('examples/functors.pro').
 
 
 
