@@ -9,7 +9,7 @@ word(anagram,a,n,a,g,r,a,m).
 word(connect,c,o,n,n,e,c,t).
 word(elegant,e,l,e,g,a,n,t).
 
-% (In questo caso non succede, ma nulla vieta a una parola di comparire più volte).
+% In questo caso non succede, ma nulla vieta a una parola di comparire più volte
 % ?- cruciverba(H1,H2,H3,V1,V2,V3).
 % H1=abalone, H2=anagram, H3=connect, V1=abandon, V2=elegant, V3=enhance ;
 % H1=abandon, H2=elegant, H3=enhance, V1=abalone, V2=anagram, V3=connect
