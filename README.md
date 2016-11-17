@@ -10,13 +10,12 @@ Definizioni di predicati ausiliari al linguaggio e raccolta di esercizi risolti 
 ## Struttura delle directory
 	/doc
 	/examples
+        /99-problems
 	/lib
-	/pdf
 	/test
 * La cartella `doc` contiene degli appunti sullo SWI-Prolog
-* La cartella `examples` contiene una raccolta di esercizi fatti a lezione, suddivisi per aree funzionali e, quando possibile, datati.
+* La cartella `examples` contiene una raccolta di esercizi fatti a lezione, suddivisi per aree funzionali e, quando possibile, datati. La sottocartella `99-problems` contiene le soluzioni (di alcuni) dei problemi presenti nell'eserciziario del corso, utili in preparazione dell'esame ([README](examples/99-problems/README.md)).
 * La cartella `lib` contiene la definizione di predicati sufficientemente utili da poter essere selezionati per estendere il set di predicati built-in nel linguaggio.
-* La cartella `pdf` contiene le soluzioni (di alcuni) dei problemi presenti nell'eserciziario del corso, utili in preparazione dell'esame ([README](pdf/README.md)).
 * La directory `test` contiene la definizione degli unit test riferiti ai predicati definiti nella cartella `lib`.
 
 ## Compilare i file singoli
