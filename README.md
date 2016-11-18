@@ -1,6 +1,8 @@
 # Prolog utilities [![Build Status](https://travis-ci.org/ilario-pierbattista/prolog-utils.svg?branch=master)](https://travis-ci.org/ilario-pierbattista/prolog-utils)
 Definizioni di predicati ausiliari al linguaggio e raccolta di esercizi risolti durante le lezioni di Intelligenza Artificiale, tenute nell'anno accademico 2016/17 presso l'Università Politecnica delle Marche dal Prof. Aldo Franco Dragoni.
 
+_Ogni contributo è ben accetto! Se siete pratici di github potete creare una pull-request, sarò felice di esaminarla ed includerla. Se non avete praticità con questo strumento, contattatemi direttamente, penserò io a caricare i file._
+
 * [Struttura delle directory](#struttura-delle-directory)
 * [Compilare i file singoli](#compilare-i-file-singoli)
 * [Documentazione](#documentazione)
