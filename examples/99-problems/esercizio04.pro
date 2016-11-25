@@ -10,3 +10,4 @@ sost([H|T],H,A,[A|L]):-
     !.
 sost([H|T],Z,A,[H|L]):-
     sost(T,Z,A,L).
+    

@@ -16,3 +16,4 @@ pivot(H,[X|T],[X|L],R):-
 pivot(H,[X|T],L,[X|R]):-
     X@<H,
     pivot(H,T,L,R).
+    

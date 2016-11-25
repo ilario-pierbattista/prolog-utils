@@ -132,16 +132,3 @@ test(lectures) :-
 	durata_minuti(L, DurataMinuti),
 	prof(D, Giorno).
 :- end_tests(functors).
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -17,16 +17,3 @@ fatto(Fatto) :-
 	isa(SuperArg, Arg1),
 	SuperFatto =.. [Relazione, SuperArg, Arg2],
 	fatto(SuperFatto).
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -131,29 +131,3 @@ test(homework) :-
 
 	search_dfs(InitState, Sol, MaxDepth).
 :- end_tests(coinstack).
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
