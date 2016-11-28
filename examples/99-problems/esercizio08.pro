@@ -2,7 +2,7 @@
 % Scrivere un programma che, dopo aver chiesto e ottenuto in input una lista, chieda (fino a quando non viene immesso fine) un atomo A. Se l'atomo appartiene alla lista, ne trovi la posizione nella lista
 
 % Predicato principale (legge la lista in input)
-es8():-
+es8:-
     write('Inserisci lista: '),
     read(L),
     is_list(L),

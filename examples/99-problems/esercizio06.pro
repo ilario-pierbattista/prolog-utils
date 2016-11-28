@@ -20,3 +20,4 @@ cruciverba(H1,H2,H3,V1,V2,V3):-
     word(V1, _, A1, _, A4, _, A7, _),
  	word(V2, _, A2, _, A5, _, A8, _),
  	word(V3, _, A3, _, A6, _, A9, _).
+    

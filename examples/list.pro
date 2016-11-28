@@ -143,29 +143,3 @@ test(get_length) :-
 	assertion(list_length_acc(L2, 3))
 	.
 :- end_tests(example_list).
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

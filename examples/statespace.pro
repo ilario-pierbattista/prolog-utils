@@ -33,7 +33,3 @@ s(iasi, neamt).
 s(oradea,arad).
 
 destination(bucharest).
-
-
-
-

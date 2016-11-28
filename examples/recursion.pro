@@ -45,22 +45,3 @@ test(fact) :-
 	factorial(N3, F3)
 	.
 :- end_tests(exercises_recursion).
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
