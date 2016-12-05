@@ -25,13 +25,8 @@
  *
  */
 
-:- include('lib/list.pro').
-:- include('test/list-test.plt').
-:- include('examples/99-problems/unittest.pro').
-:- include('examples/coinstack.pro').
-:- include('examples/functors.pro').
-:- include('examples/list.pro').
-:- include('examples/recursion.pro').
+:- include('esercizio07.pro').
+
 
 
 
