@@ -33,6 +33,10 @@
 :- include('examples/list.pro').
 :- include('examples/recursion.pro').
 
+custom_run_tests :-
+	run_tests,halt(0).
+custom_run_tests :-
+	halt(1).
 
 
 

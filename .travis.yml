@@ -11,4 +11,4 @@ before_install:
   - sudo apt-get install -y swi-prolog
 
 script:
-  - echo "run_tests. halt(0)." | swipl -s unittest.pro | grep -q 'true.'
+  - echo "custom_run_tests." | swipl -s unittest.pro
